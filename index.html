@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Static Server</title>
+    <link rel="stylesheet" type="text/css" href="css/blue.css" />
+
+    <!-- Doesn't seem like you can get the response from this: -->
+    <script src="/api/hello"></script>
+    <!-- I got this from online, but I don't fully understand why it needs 2 thens? -->
+    <script>
+      fetch("/api/hello")
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          console.log(data);
+        });
+    </script>
+  </head>
+  <body>
+    <h1 class="heading">Hello World</h1>
+  </body>
+</html>
